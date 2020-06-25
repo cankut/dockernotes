@@ -12,6 +12,9 @@ Tips on Docker
 
 `docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started`
 
+### Alternative (directly provide path)
+`docker run -dp 3000:3000 -v c:\data:/etc/todos getting-started`
+
 ### Difference between RUN and CMD in Dockerfile
 ```dockerfile
 # RUN executes a command on build of an image
