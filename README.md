@@ -15,6 +15,13 @@ Tips on Docker
 ### Alternative (directly provide path)
 `docker run -dp 3000:3000 -v c:\data:/etc/todos getting-started`
 
+### Run app in development mode 
+  1. bind local path with containers app path
+  2. bind db path for persistence 
+  3. monitor for changes with nodemon (in package.json)
+
+`docker run -dp 3000:3000 -w /app -v c:\docker\app:/app -v todo-db:/etc/todos node:12-alpine sh -c "yarn install && yarn run dev"`
+
 ### Difference between RUN and CMD in Dockerfile
 ```dockerfile
 # RUN executes a command on build of an image
